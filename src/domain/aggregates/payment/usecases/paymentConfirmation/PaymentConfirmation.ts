@@ -39,6 +39,7 @@ export class PaymentConfirmation {
             order_id: pendingList[i].order_id,
             payment_status: 3,
           };
+          console.log('Payment confirmation',JSON.stringify(msg));
           queuePaymentService.sendMessage(msg);
         }
       } else {
